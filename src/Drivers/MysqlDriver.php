@@ -1,6 +1,6 @@
 <?php
 
-namespace Asko\Migrato\Drivers;
+namespace Asko\Migrator\Drivers;
 
 use Asko\Migrator\ConnectionDriver;
 use PDOException;
