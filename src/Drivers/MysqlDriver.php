@@ -68,7 +68,7 @@ class MysqlDriver implements ConnectionDriver
      */
     public function revert(array $migrations): void
     {
-        $last_migration_stmt = $this->db->prepare("SELECT name FROM migrations ORDER BY id");
+        $last_migration_stmt = $this->db->prepare("SELECT name FROM migrations ORDER BY id DESC LIMIT 1");
         $last_migration_stmt->execute();
         $last_migration = $last_migration_stmt->fetch(\PDO::FETCH_COLUMN);
 
