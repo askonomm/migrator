@@ -16,7 +16,7 @@ Your migration files should be placed in a directory. Each migration file is jus
 
 ```php
 use Asko\Migrator\Migrator;
-use Asko\Migrator\Driver\MysqlDriver;
+use Asko\Migrator\Drivers\MysqlDriver;
 
 $migrator = new Migrator('migrations_path', new MysqlDriver(...));
 
